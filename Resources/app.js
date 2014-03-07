@@ -39,8 +39,19 @@ var nextButtonBack = Ti.UI.createView({
 	width: 120
 });
 
+var previousButton = Ti.UI.createLabel({
+	text: "Previous"
+});
+
+var nextButton = Ti.UI.createLabel({
+	text: "Next"
+});
+
+
 var loadFile = require("app2");
 
+previousButtonBack.add(previousButton);
+nextButtonBack.add(nextButton);
 firstWindow.add(myFirstView, previousButtonBack, nextButtonBack);
 myFirstView.add(myText);
 firstWindow.open();
